@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Figtree, Syne } from "next/font/google";
+import { Figtree, Syne, Noto_Nastaliq_Urdu } from "next/font/google";
+import { AppProvider } from "@/context/AppContext";
 import "./globals.css";
 
 const display = Syne({
@@ -14,19 +15,27 @@ const body = Figtree({
   weight: ["400", "500", "600", "700"],
 });
 
+const urdu = Noto_Nastaliq_Urdu({
+  variable: "--font-urdu",
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+});
+
 export const metadata: Metadata = {
-  title: "Kaam — Hire trusted local help",
+  title: "kaamSet — Domestic & household hiring in Pakistan",
   description:
-    "Hire verified drivers, housekeepers, cooks, cleaners, and caregivers across Pakistan.",
+    "Workers join with a phone number. Households, restaurants, and offices hire domestic help with Urdu/English, verification, and fair commission.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${display.variable} ${body.variable} h-full antialiased`}
+      className={`${display.variable} ${body.variable} ${urdu.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <AppProvider>{children}</AppProvider>
+      </body>
     </html>
   );
 }

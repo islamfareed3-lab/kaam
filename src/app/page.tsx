@@ -1,5 +1,5 @@
-import Marketplace from "@/components/Marketplace";
+import Landing from "@/components/Landing";
 
 export default function Home() {
-  return <Marketplace />;
+  return <Landing />;
 }

@@ -1,5 +1,5 @@
 {
-  "name": "kaam",
+  "name": "kaamset",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -23,5 +23,5 @@
     "tailwindcss": "4.3.3",
     "typescript": "^5"
   },
-  "description": "Hire trusted local service professionals"
+  "description": "Domestic and household hiring marketplace for Pakistan"
 }

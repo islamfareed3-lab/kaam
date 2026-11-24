@@ -46,6 +46,14 @@ body {
   font-family: var(--font-body), system-ui, sans-serif;
 }
 
+html[dir="rtl"] body {
+  font-family: var(--font-urdu), var(--font-body), system-ui, sans-serif;
+}
+
+html[dir="rtl"] .font-\[family-name\:var\(--font-display\)\] {
+  font-family: var(--font-urdu), var(--font-display), system-ui, sans-serif;
+}
+
 ::selection {
   background: var(--mint);
   color: var(--pine-deep);
